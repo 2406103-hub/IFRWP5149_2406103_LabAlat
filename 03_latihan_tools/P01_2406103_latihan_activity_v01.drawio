@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="BNzFfCOadm8cUH1uJKO9" name="Page-1">
+        <mxGraphModel dx="604" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-7" edge="1" parent="1" source="ZE7TbrfgPOEgAD83Tp9J-1" style="edgeStyle=none;html=1;" target="ZE7TbrfgPOEgAD83Tp9J-6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-1" parent="1" style="ellipse;fillColor=strokeColor;html=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="395" y="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-2" parent="1" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="395" y="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-9" edge="1" parent="1" source="ZE7TbrfgPOEgAD83Tp9J-6" style="edgeStyle=none;html=1;" target="ZE7TbrfgPOEgAD83Tp9J-8" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-6" parent="1" style="whiteSpace=wrap;html=1;" value="buka data peralatan" vertex="1">
+                    <mxGeometry height="60" width="120" x="350" y="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-11" edge="1" parent="1" source="ZE7TbrfgPOEgAD83Tp9J-8" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZE7TbrfgPOEgAD83Tp9J-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZE7TbrfgPOEgAD83Tp9J-8" parent="1" style="whiteSpace=wrap;html=1;" value="lihat informasi&lt;div&gt;ketersediaan&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="350" y="265" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
