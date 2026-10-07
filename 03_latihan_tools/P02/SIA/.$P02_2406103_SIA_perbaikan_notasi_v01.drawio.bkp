@@ -1,0 +1,13 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="1h6j40R12mzLUxNKJ3Z6">
+    <mxGraphModel dx="976" dy="952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RY9PRG-wyH1mcVX_TyPu-1" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;" value="sistem laboratorium." vertex="1">
+          <mxGeometry height="510" width="670" x="80" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
