@@ -1,6 +1,6 @@
 ID artefak          : 03
 Judul               : USE CASE DIAGRAM DAN USE CASE DESCRIPTION
-Pertemuan           : 1
+Pertemuan           : 3
 Sumber skenario     : modul
 Jenis/status        : latihan 
 Kakas               : draw.io
