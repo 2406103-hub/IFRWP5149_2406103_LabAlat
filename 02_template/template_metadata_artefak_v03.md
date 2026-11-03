@@ -1,11 +1,12 @@
-ID artefak          : 03
-Judul               : USE CASE DIAGRAM DAN USE CASE DESCRIPTION
-Pertemuan           : 3
-Sumber skenario     : modul
-Jenis/status        : latihan 
-Kakas               : draw.io
-Pembuat             : 2406103 rani
-Versi dan tanggal   : v03 14-10-2026
-Asumsi/pertanyaan   : -
-Pemeriksaan         : -
-Riwayat revisi      : laporan, redme dan latihan tools 15-10-2026
+|ID artefak       |:|                 LAB-P02-UC                  |
+|-----------------|-|---------------------------------------------|
+|Judul            |:|     Latihan notasi fungsi laboratorium      |
+|Pertemuan        |:|                     03                     |
+|Sumber kebutuhan |:|              LAB-R01; LAB-R02               |
+|Jenis/status     |:|      Use case diagram / LATIHAN NOTASI      |
+|Kakas            |:|                   drow.io            |
+|Pembuat          |:|          Rani nurcahyani - 2406103            |
+|Versi dan tanggal|:|         v01 / 14 - 10 -2026          |
+|Asumsi           |:|Hak akses sesuai; autentikasi di luar latihan|
+|Pemeriksaan      |:|               [hasil review]                |
+|Riwayat revisi   |:|   melakukan use case include & extance   |

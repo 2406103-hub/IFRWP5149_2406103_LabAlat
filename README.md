@@ -1,7 +1,7 @@
 2406103
 rani nurcahyani 
 kelas c
-pertemuan 4 USE CASE DIAGRAM LANJUTAN: GENERALIZATION DAN COLLABORATION
+pertemuan 5 USE CASE DIAGRAM LANJUTAN: GENERALIZATION DAN COLLABORATION
 
 Mengidentifikasi satu aktor umum dan minimal dua aktor khusus dari skenario yang diberikan, lalu menyusun hierarki generalization aktor dengan arah panah yang benar (aktor khusus menuju aktor umum) tanpa menggambar ulang asosiasi yang diwarisi.
 Menyusun generalization use case yang memuat satu use case umum dan minimal dua use case khusus, serta menjelaskan perilaku yang diwarisi dari use case umum dan perilaku yang membedakan setiap use case khusus.

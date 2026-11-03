@@ -1,44 +1,57 @@
-<!-- skenario tugas-->
-Mahasiswa mengajukan KRS dengan memilih mata kuliah. Setiap pengajuan menjalankan validasi KRS yang memeriksa kelengkapan, prasyarat mata kuliah, dan benturan jadwal. Jika validasi berhasil, sistem menyimpan pengajuan berstatus menunggu persetujuan dosen wali. Pada konfirmasi penyimpanan, mahasiswa dapat memilih mengunduh bukti pengajuan. Dosen wali menyetujui atau menolak KRS dan memberikan catatan keputusan.
+Mahasiswa mengajukan peminjaman peralatan dengan memilih alat, 
+jumlah, dan rentang waktu. Sistem memeriksa ketersediaan. Jika 
+tersedia dan data lengkap, sistem menyimpan pengajuan berstatus 
+menunggu keputusan. Pada tampilan konfirmasi, mahasiswa dapat 
+memilih mencetak bukti pengajuan. Petugas mengelola data peralatan 
+serta menyetujui atau menolak pengajuan. Kepala laboratorium melihat 
+laporan peminjaman. 
 
-<!-- tabel kebutuhan-->
-|  ID   |                                         Kebutuhan                                          |
-|-------|--------------------------------------------------------------------------------------------|
-|SIA-R01|                           Mahasiswa dapat melihat jadwal kuliah.                           |
-|SIA-R02|                       Admin akademik dapat mengelola jadwal kuliah.                        |
-|SIA-R03|                              Mahasiswa dapat mengajukan KRS.                               |
-|SIA-R04|                Sistem memvalidasi KRS sebagai bagian dari proses pengajuan.                |
-|SIA-R05|         Mahasiswa dapat mengunduh bukti jika memilihnya pada konfirmasi pengajuan.         |
-|SIA-R06|Dosen wali dapat memproses persetujuan atau penolakan KRS dan memberikan catatan keputusan. |
+# Kebutuhan Sistem Laboratorium
 
-<!-- Batas sistem dan aturan -->
-Batas dan asumsi:
-•	Pengguna telah terautentikasi dan memiliki hak akses sesuai perannya.
-•	Data mata kuliah, prasyarat, dan jadwal tersedia.
-•	Validasi yang gagal menyebabkan pengajuan belum berhasil tersimpan.
-•	Unduh bukti bukan syarat keberhasilan pengajuan KRS.
-•	KRS yang tersimpan berstatus menunggu persetujuan dosen wali dan belum berarti disetujui.
-•	Pembayaran, pengisian nilai, batas SKS, serta implementasi basis data berada di luar cakupan tugas.
+| ID | Kebutuhan |
+|---|---|
+| LAB-R01 | Mahasiswa dapat melihat ketersediaan peralatan |
+| LAB-R02 | Petugas dapat mengelola data peralatan |
+| LAB-R03 | Mahasiswa dapat mengajukan peminjaman; sistem memeriksa ketersediaan sebelum menyimpan pengajuan |
+| LAB-R04 | Mahasiswa dapat mencetak bukti pada konfirmasi pengajuan jika memilihnya |
+| LAB-R05 | Petugas dapat menetapkan persetujuan atau penolakan pengajuan |
+| LAB-R06 | Kepala laboratorium dapat melihat laporan peminjaman |
 
-<!-- identifikasi  aktor-->
-|    Aktor    |                                 Tujuan                                               |
-|-------------|--------------------------------------------------------------------------------------|
-|  Mahasiswa  |Melihat jadwal kuliah, mengajukan KRS, dan mengunduh bukti pengajuan jika diperlukan. |
-|Adminakademik|                               Mengelola jadwal kuliah.                               |
-|  Dosenwali  |           Menyetujui atau menolak KRS serta memberikan catatan keputusan.            |
+Batas sistem dan aturan: 
+• Sistem mencatat dan menyediakan informasi; perpindahan fisik alat tidak 
+terjadi di dalam perangkat lunak. 
 
-<!-- katalog usecase -->
-|   ID   |     Nama use case         |                   Aktor terkait                           |Sumber kebutuhan|
-|--------|---------------------------|-----------------------------------------------------------|----------------|
-|SIA-UC01|  Lihat jadwal kuliah      |                    Mahasiswa                              |    SIA-R01     |
-|SIA-UC02|  Kelola jadwal kuliah     |                  Adminakademik                            |    SIA-R02     |
-|SIA-UC03|      Ajukan KRS           |                    Mahasiswa                              |    SIA-R03     |
-|SIA-UC04|     Validasi KRS          |Bagian dari SIA-UC03, tidak dimulai aktor secara terpisah  |    SIA-R04     |
-|SIA-UC05|Unduh bukti pengajuan KRS  |                    Mahasiswa                              |    SIA-R05     |
-|SIA-UC06|  Proses keputusanKRS      |                    Dosenwali                              |    SIA-R06     |
- 
-<!-- relasi include -->
-«include» SIA-UC04. Alasan: validasi kelengkapan data, prasyarat mata kuliah, dan benturan jadwal selalu menjadi bagian dari setiap pengajuan KRS.
+• Pengguna telah terautentikasi dan memiliki hak akses sesuai peran. 
 
-<!-- relasi extend -->
-«extend» SIA-UC03. Use case dasar: Ajukan KRS. Kondisi: [mahasiswa memilih unduh]. Extension point: Bukti pengajuan tersedia. Alasan: pengajuan tetap berhasil tersimpan walaupun mahasiswa tidak mengunduh bukti.
+• Pengajuan yang diterima sistem berstatus Menunggu keputusan, bukan 
+otomatis Disetujui. 
+
+• Pengajuan dengan peralatan tidak tersedia tidak disimpan sebagai 
+pengajuan berhasil. 
+
+• Pencetakan bukti tidak menjadi syarat keberhasilan pengajuan. 
+
+• Persetujuan petugas belum dimodelkan sebagai reservasi teknis stok. 
+
+• Pengambilan, pengembalian, kondisi alat, dan denda belum dianalisis 
+pada potongan model ini.
+
+| Aktor | Tujuan terhadap sistem |
+|---|---|
+| Mahasiswa | Melihat ketersediaan, mengajukan peminjaman, dan mencetak bukti |
+| Petugas laboratorium | Mengelola peralatan dan memproses keputusan |
+| Kepala laboratorium | Melihat laporan peminjaman |
+
+
+
+
+
+| ID | Nama use case | Peran dalam model |
+|---|---|---|
+| LAB-UC01 | Lihat ketersediaan peralatan | Fungsi utama mahasiswa |
+| LAB-UC02 | Kelola data peralatan | Fungsi utama petugas |
+| LAB-UC03 | Ajukan peminjaman | Fungsi utama mahasiswa |
+| LAB-UC04 | Periksa ketersediaan | Perilaku yang disertakan UC03 |
+| LAB-UC05 | Cetak bukti pengajuan | Tambahan bersyarat pada UC03 |
+| LAB-UC06 | Proses keputusan peminjaman | Fungsi utama petugas |
+| LAB-UC07 | Lihat laporan peminjaman | Fungsi utama kepala laboratorium |

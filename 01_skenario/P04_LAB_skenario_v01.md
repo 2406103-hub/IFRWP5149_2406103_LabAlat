@@ -17,9 +17,7 @@ pengajuan oleh mahasiswa, proses keputusan peminjaman oleh petugas,
 dan laporan peminjaman untuk kepala laboratorium. Diagram Pertemuan 
 4 adalah diagram Pertemuan 3 yang ditambah, bukan diagram baru yang 
 menggantikannya.
-
 # kedudukan
-
 | Aktor | Kedudukan | Tujuan terhadap sistem |
 |---|---|---|
 | Peminjam | Umum (general), baru pada Pertemuan 4 | Peran umum bagi peminjam peralatan. Mewariskan fungsinya kepada Mahasiswa dan Dosen. |
