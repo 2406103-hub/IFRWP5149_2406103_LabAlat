@@ -1,11 +1,24 @@
-2406103
-rani nurcahyani 
-kelas c
-pertemuan 5 USE CASE DIAGRAM LANJUTAN: GENERALIZATION DAN COLLABORATION
+Nama : rani nurcahyani
+NIM : 2406103
+kelas : c
+kakas : DRAW.IO
 
-Mengidentifikasi satu aktor umum dan minimal dua aktor khusus dari skenario yang diberikan, lalu menyusun hierarki generalization aktor dengan arah panah yang benar (aktor khusus menuju aktor umum) tanpa menggambar ulang asosiasi yang diwarisi.
-Menyusun generalization use case yang memuat satu use case umum dan minimal dua use case khusus, serta menjelaskan perilaku yang diwarisi dari use case umum dan perilaku yang membedakan setiap use case khusus.
-Menempatkan minimal dua collaboration (elips garis putus-putus) yang namanya sama persis dengan use case yang direalisasikan, dan menghubungkannya dengan relasi realization (garis putus-putus berujung segitiga kosong) dari collaboration menuju use case.
-Membuat use case diagram kumulatif Pertemuan 4 pada kasus laboratorium, yaitu diagram Pertemuan 3 yang dipertahankan utuh (LAB UC01 sampai LAB-UC07, relasi «include», relasi «extend» beserta kondisi dan extension point-nya, dan ketiga aktor Pertemuan 3) lalu ditambah elemen baru Pertemuan 4, dengan seluruh aktor di luar batas sistem dan seluruh use case di dalam batas sistem.
-Menyusun satu use case description baru (Catat Pengembalian Peralatan) yang memuat pemicu, prasyarat, alur utama, alur alternatif, pascakondisi berhasil, dan pascakondisi gagal, serta konsisten dengan diagram.
-Menunjukkan keterlacakan setiap elemen baru (aktor, use case, collaboration) ke kebutuhan yang mendasarinya, memperbaiki model berdasarkan review, dan mendokumentasikan perubahan pada versi
+pertemuan 6 ACTIVITY DIAGRAM: DARI SKENARIO KE ALUR AKTIVITAS
+
+1. Menyusun alur utama sebuah activity diagram dari Skenario Normal pada 
+tabel skenario Pertemuan 5, dengan tepat satu initial node, action yang 
+berurutan mengikuti langkah skenario, dan tepat satu activity final node, 
+tanpa alur yang terputus (Indikator 4.1). 
+2. Mengubah Skenario Alternative pada tabel skenario menjadi cabang 
+decision dengan guard yang lengkap dan benar, lalu mengembalikan 
+cabangnya ke alur utama melalui merge atau mengakhirinya pada jalur akhir 
+yang jelas (Indikator 4.2). 
+3. Menggunakan fork dan join sebagai pasangan untuk dua proses yang 
+berjalan paralel, dengan join yang menyatukan kembali kedua proses 
+sebelum alur dilanjutkan (Indikator 4.2). 
+4. Mengelompokkan setiap action ke dalam swimlane yang sesuai dengan 
+aktor pada tabel skenario, sehingga tanggung jawab setiap action terbaca 
+dari partisinya (Indikator 4.1 dan 4.2). 
+5. Menelusurkan setiap action pada activity diagram ke langkah tabel skenario 
+Pertemuan 5 yang menjadi sumbernya, dan memeriksa hasil akhir dengan 
+checklist penilaian sebelum berkas dikumpulkan.

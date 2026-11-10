@@ -1,0 +1,140 @@
+<mxfile host="65bd71144e">
+    <diagram id="QVk4sY8ru2bbZjsIY22A" name="Activity Diagram Lihat Ketersediaan Peralatan">
+        <mxGraphModel dx="707" dy="1515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-31" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;labelBackgroundColor=#ffffff;align=center;" target="ZdJm4_3lUxF1gnw8ltcD-25" value="[tersedia]">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="540" y="370"/>
+                            <mxPoint x="540" y="560"/>
+                            <mxPoint x="485" y="560"/>
+                        </Array>
+                        <mxPoint x="525" y="370" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-34" parent="1" style="swimlane;html=1;startSize=30;horizontal=1;collapsible=0;horizontalStack=0;fontStyle=1;align=center;whiteSpace=wrap;" value="Mahasiswa" vertex="1">
+                    <mxGeometry height="920" width="240" x="80" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-35" parent="ZdJm4_3lUxF1gnw8ltcD-34" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="105" y="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-36" parent="ZdJm4_3lUxF1gnw8ltcD-34" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#ffffff;strokeColor=#000000;" value="Menyerahkan peralatan yang dipinjam" vertex="1">
+                    <mxGeometry height="50" width="210" x="15" y="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-37" parent="1" style="swimlane;html=1;startSize=30;horizontal=1;collapsible=0;horizontalStack=0;fontStyle=1;align=center;whiteSpace=wrap;" value="Sistem" vertex="1">
+                    <mxGeometry height="920" width="260" x="320" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-38" parent="ZdJm4_3lUxF1gnw8ltcD-37" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="Kondisi&#xa;peralatan baik&#xa;dan lengkap?" vertex="1">
+                    <mxGeometry height="80" width="140" x="60" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-39" parent="ZdJm4_3lUxF1gnw8ltcD-37" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#d5e8d4;strokeColor=#82b366;" value="Perbarui status peralatan menjadi&#xa;tersedia" vertex="1">
+                    <mxGeometry height="50" width="210" x="25" y="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-40" parent="ZdJm4_3lUxF1gnw8ltcD-37" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+                    <mxGeometry height="40" width="40" x="110" y="650" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-41" parent="ZdJm4_3lUxF1gnw8ltcD-37" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#ffffff;strokeColor=#000000;" value="Menutup transaksi peminjaman" vertex="1">
+                    <mxGeometry height="50" width="190" x="35" y="720" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-42" parent="ZdJm4_3lUxF1gnw8ltcD-37" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="115" y="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-43" parent="1" style="swimlane;html=1;startSize=30;horizontal=1;collapsible=0;horizontalStack=0;fontStyle=1;align=center;whiteSpace=wrap;" value="Petugas Laboratorium" vertex="1">
+                    <mxGeometry height="920" width="280" x="580" y="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-44" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#ffffff;strokeColor=#000000;" value="Catat Pengembalian Peralatan&#xa;(LAB-UC11)" vertex="1">
+                    <mxGeometry height="50" width="210" x="35" y="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-45" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="html=1;whiteSpace=wrap;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+                    <mxGeometry height="8" width="250" x="15" y="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-46" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#ffffff;strokeColor=#000000;" value="Periksa Kondisi Peralatan&#xa;(dari LAB-UC12): kondisi fisik" vertex="1">
+                    <mxGeometry height="65" width="125" x="10" y="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-47" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#ffffff;strokeColor=#000000;" value="Periksa kelengkapan&#xa;aksesori peralatan (unsur&#xa;proses baru)" vertex="1">
+                    <mxGeometry height="65" width="125" x="145" y="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-48" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="html=1;whiteSpace=wrap;fillColor=#000000;strokeColor=none;" value="" vertex="1">
+                    <mxGeometry height="8" width="250" x="15" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-49" parent="ZdJm4_3lUxF1gnw8ltcD-43" style="rounded=1;whiteSpace=wrap;html=1;arcsize=15;fillColor=#f8cecc;strokeColor=#b85450;" value="Catat kerusakan atau kekurangan dan&#xa;jadwalkan perbaikan" vertex="1">
+                    <mxGeometry height="50" width="210" x="35" y="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-50" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-36" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-51" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-44" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="200" y="245"/>
+                            <mxPoint x="720" y="245"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-52" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-45" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-53" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-46" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="652" y="280"/>
+                            <mxPoint x="652" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-54" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-47" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="787" y="280"/>
+                            <mxPoint x="787" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-55" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-48" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-56" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-48" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-57" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-38" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="440"/>
+                            <mxPoint x="450" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-58" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;labelBackgroundColor=#ffffff;align=center;" target="ZdJm4_3lUxF1gnw8ltcD-39" value="[baik dan lengkap]">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-59" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;labelBackgroundColor=#ffffff;align=center;" target="ZdJm4_3lUxF1gnw8ltcD-49" value="[rusak atau tidak lengkap]">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="540" y="510"/>
+                            <mxPoint x="720" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-60" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-40" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-61" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-40" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="720"/>
+                            <mxPoint x="450" y="720"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-62" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-41" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZdJm4_3lUxF1gnw8ltcD-63" edge="1" parent="1" source="ZdJm4_3lUxF1gnw8ltcD-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" target="ZdJm4_3lUxF1gnw8ltcD-42" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
