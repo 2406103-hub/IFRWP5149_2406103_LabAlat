@@ -1,59 +1,89 @@
-<!-- tabel ajukan KRS-->
-|         Elemen         |                            Deskripsi                                                        |
-|------------------------|---------------------------------------------------------------------------------------------|
-| Sumber kebutuhan       | SIA-R03, SIA-R04, SIA-R05                                                                   |
-| Tujuan                 | Mengirim pengajuan KRS yang lolos validasi.                                                 |
-| Aktor utama            | Mahasiswa                                                                                   |
-| Aktor pendukung        | Sistem Informasi Akademik                                                                   |
-| Pemicu                 | Mahasiswa memilih menu KRS.                                                                 |
-| Prasyarat              | Mahasiswa terautentikasi.                                                                   |
-| Alur utama             | Mahasiswa mengajukan matkul, sistem memvalidasi, menyimpan data, lalu tampilkan konfirmasi. |
-| Alur alternatif        | Validasi gagal, pengajuan batal tersimpan.                                                  |
-| Pascakondisi berhasil  | KRS tersimpan berstatus Menunggu persetujuan.                                               |
-| Pascakondisi gagal     | Pengajuan tidak tersimpan.                                                                  |
-| Aturan bisnis/asumsi   | KRS tersimpan belum disetujui; unduh bukti opsional.                                        |
+| Elemen | Keterangan |
+|---|---|
+| Tujuan | Menyimpan pengajuan KRS untuk diproses dosen wali. |
+| Aktor utama | Mahasiswa |
+| Sumber | SIA-R01, SIA-R02, SIA-R03 |
+| Pemicu | Mahasiswa memilih fungsi pengajuan KRS. |
+| Prasyarat | Mahasiswa telah terautentikasi dan data mata kuliah tersedia. |
+| Pascakondisi berhasil | Pengajuan tersimpan dengan status Menunggu persetujuan dosen wali. |
+| Pascakondisi gagal | Pengajuan tidak berhasil tersimpan. |
+| Include | SIA-UC02 — Validasi KRS |
+| Extend | SIA-UC03 — Unduh bukti pengajuan KRS |
 
-<!-- tabel Validasi KRS-->
-|         Elemen         |                            Deskripsi                                                  |
-|------------------------|---------------------------------------------------------------------------------------|
-| Sumber kebutuhan       | SIA-R04 (bagian dari SIA-R03)                                                         |
-| Tujuan                 | Memastikan data lengkap, prasyarat terpenuhi, dan tidak bentrok.                      |
-| Aktor utama            | Sistem Informasi Akademik (dipanggil oleh SIA-UC03)                                   |
-| Aktor pendukung        | Mahasiswa sebagai pengaju melalui SIA-UC03                                            |
-| Pemicu                 | SIA-UC03 mencapai tahap validasi pengajuan.                                           |
-| Prasyarat              | Mahasiswa terautentikasi dan telah memilih matkul di KRS.                             |
-| Alur utama             | Sistem menerima data, memeriksa kelengkapan, prasyarat, dan bentrok, lalu kirim hasil.|
-| Alur alternatif        | Data tak lengkap, prasyarat tak sesuai, atau jadwal bentrok, pengajuan batal.         |
-| Pascakondisi berhasil  | Validasi lolos, SIA-UC03 dapat menyimpan pengajuan.                                   |
-| Pascakondisi gagal     | Validasi gagal, SIA-UC03 tidak menyimpan pengajuan.                                   |
-| Aturan bisnis/asumsi   | Validasi wajib dijalankan; batas SKS dan biaya di luar cakupan.                       |
 
-<!-- tabel Unduh bukti pengajuan KRS-->
-|         Elemen         |                                       Deskripsi                                       |
-|------------------------|---------------------------------------------------------------------------------------|
-| Sumber kebutuhan       | SIA-R05                                                                               |
-| Tujuan                 | Mendapatkan berkas bukti pengajuan KRS yang tersimpan.                                |
-| Aktor utama            | Mahasiswa                                                                             |
-| Aktor pendukung        | Sistem Informasi Akademik                                                             |
-| Pemicu                 | Mahasiswa memilih tombol unduh bukti.                                                 |
-| Prasyarat              | KRS telah tersimpan dan konfirmasi pengajuan muncul.                                  |
-| Alur utama             | Mahasiswa memilih unduh, sistem menyiapkan berkas dan menyediakan file untuk diunduh.|
-| Alur alternatif        | Jika bukti gagal disiapkan, beri pesan error; jika opsi tak dipilih, KRS tetap sukses.|
-| Pascakondisi berhasil  | File bukti pengajuan siap diunduh.                                                    |
-| Pascakondisi gagal     | Bukti gagal diunduh, namun pengajuan KRS tetap tersimpan.                             |
-| Aturan bisnis/asumsi   | Merupakan ekstensi opsional dari SIA-UC03 saat opsi unduh dipilih.                    |
+## 1. SIA-UC01 — Ajukan KRS
 
-<!-- tabel Proses keputusan KRS--> 
-|         Elemen         |                                       Deskripsi                                       |
-|------------------------|---------------------------------------------------------------------------------------|
-| Sumber kebutuhan       | SIA-R06                                                                               |
-| Tujuan                 | Mencatat keputusan persetujuan/penolakan KRS dosen wali beserta catatannya.           |
-| Aktor utama            | Dosen wali                                                                            |
-| Aktor pendukung        | Sistem Informasi Akademik                                                             |
-| Pemicu                 | Dosen wali membuka pengajuan KRS yang menggantung.                                    |
-| Prasyarat              | Dosen wali sudah login dan ada pengajuan KRS berstatus Menunggu.                      |
-| Alur utama             | Dosen wali meninjau detail, memilih keputusan, mengisi catatan, lalu kirim hasil.     |
-| Alur alternatif        | Jika data/keputusan kosong, minta dilengkapi; jika tak ada pengajuan, tampilkan error.|
-| Pascakondisi berhasil  | Keputusan dan catatan tersimpan.                                                      |
-| Pascakondisi gagal     | Keputusan tidak berubah dan pengajuan belum diproses.                                 |
-| Aturan bisnis/asumsi   | Hanya dosen wali terautentikasi yang bisa memproses keputusan.                        |
+| Elemen | Deskripsi |
+|---|---|
+| ID | SIA-UC01 |
+| Nama Use Case | Ajukan KRS |
+| Tujuan | Menghasilkan pengajuan KRS yang tersimpan untuk diproses dosen wali. |
+| Aktor Utama | Mahasiswa |
+| Sumber Kebutuhan | SIA-R01, SIA-R02, SIA-R03 |
+| Pemicu | Mahasiswa memilih fungsi pengajuan KRS. |
+| Prasyarat | Mahasiswa telah terautentikasi dan data mata kuliah tersedia. |
+| Pascakondisi Berhasil | Pengajuan tersimpan dengan status Menunggu persetujuan dosen wali. |
+| Pascakondisi Gagal | Pengajuan baru tidak berhasil tersimpan. |
+| Include | SIA-UC02 — Validasi KRS |
+| Extend | SIA-UC03 — Unduh bukti pengajuan KRS |
+| Extension Point | Bukti pengajuan tersedia pada konfirmasi penyimpanan. |
+
+## 2. SIA-UC02 — Validasi KRS
+
+| Elemen | Deskripsi |
+|---|---|
+| ID | SIA-UC02 |
+| Nama Use Case | Validasi KRS |
+| Tujuan | Memastikan pengajuan KRS memenuhi ketentuan yang ditetapkan. |
+| Aktor Utama | Tidak ada aktor langsung; dipanggil oleh SIA-UC01. |
+| Sumber Kebutuhan | SIA-R02 |
+| Pemicu | SIA-UC01 meminta proses validasi. |
+| Prasyarat | Pengajuan telah dikirim dan data yang dibutuhkan tersedia. |
+| Pascakondisi Berhasil | Seluruh pemeriksaan validasi dinyatakan lolos. |
+| Pascakondisi Gagal | Sistem mengembalikan hasil validasi gagal beserta informasi masalah. |
+| Relasi | `<<include>>` dari SIA-UC01. |
+
+## 3. SIA-UC03 — Unduh Bukti Pengajuan KRS
+
+| Elemen | Deskripsi |
+|---|---|
+| ID | SIA-UC03 |
+| Nama Use Case | Unduh bukti pengajuan KRS |
+| Tujuan | Memberikan bukti pengajuan KRS kepada mahasiswa. |
+| Aktor Utama | Mahasiswa |
+| Sumber Kebutuhan | SIA-R03 |
+| Pemicu | Mahasiswa memilih opsi unduh bukti pada konfirmasi pengajuan. |
+| Prasyarat | Pengajuan KRS berhasil tersimpan. |
+| Pascakondisi Berhasil | Bukti pengajuan berhasil diunduh. |
+| Pascakondisi Gagal | Pengajuan tetap tersimpan, tetapi bukti tidak berhasil diunduh. |
+| Relasi | `<<extend>>` terhadap SIA-UC01. |
+| Kondisi Extend | Mahasiswa memilih untuk mengunduh bukti. |
+| Extension Point | Bukti pengajuan tersedia pada konfirmasi penyimpanan. |
+
+## 4. SIA-UC04 — Proses Keputusan KRS
+
+| Elemen | Deskripsi |
+|---|---|
+| ID | SIA-UC04 |
+| Nama Use Case | Proses keputusan KRS |
+| Tujuan | Mencatat keputusan persetujuan atau penolakan pengajuan KRS. |
+| Aktor Utama | Dosen wali |
+| Sumber Kebutuhan | SIA-R04 |
+| Pemicu | Dosen wali memilih pengajuan KRS yang menunggu keputusan. |
+| Prasyarat | Dosen wali telah terautentikasi dan pengajuan tersedia untuk diproses. |
+| Pascakondisi Berhasil | Keputusan dan catatan tersimpan serta status pengajuan diperbarui. |
+| Pascakondisi Gagal | Keputusan baru tidak berhasil tersimpan dan status sebelumnya dipertahankan. |
+
+## 5. SIA-UC05 — Lihat Status Pengajuan KRS
+
+| Elemen | Deskripsi |
+|---|---|
+| ID | SIA-UC05 |
+| Nama Use Case | Lihat status pengajuan KRS |
+| Tujuan | Memungkinkan mahasiswa mengetahui status terkini pengajuan KRS. |
+| Aktor Utama | Mahasiswa |
+| Sumber Kebutuhan | SIA-R05 |
+| Pemicu | Mahasiswa membuka menu status pengajuan KRS. |
+| Prasyarat | Mahasiswa telah terautentikasi. |
+| Pascakondisi Berhasil | Status pengajuan KRS ditampilkan kepada mahasiswa. |
+| Pascakondisi Gagal | Sistem menampilkan informasi jika pengajuan belum tersedia. |
